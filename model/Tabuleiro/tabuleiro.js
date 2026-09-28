@@ -1,15 +1,19 @@
  export default class Tabuleiro{
-  meuTabuleiro = [
+  constructor(){
+     this.meuTabuleiro = [
     ["", "", ""],
     ["", "", ""],
     ["", "", ""],
   ];
+  }
 
   fazerJogada(linha, coluna, valor) {
     if (this.meuTabuleiro[linha][coluna] == "") {
       this.meuTabuleiro[linha][coluna] = valor
+      return true
     }else{
       console.log(`Ja existe o um valor nessa ${linha} e coluna ${coluna}`)
+      return false
     }
   }
 

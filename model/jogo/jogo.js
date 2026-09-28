@@ -1,11 +1,31 @@
-import Tabuleiro from "../Tabuleiro/tabuleiro";
+import Tabuleiro from "../Tabuleiro/tabuleiro.js";
+import Chapeleiro from '../chapeleiro/chapeleiro.js';
 
-class jogo {
+ export default class Jogo {
   constructor(primeiroJogador, segundoJogador, jogadorEscolhido) {
     this.primeiroJogador = primeiroJogador;
     this.segundoJogador = segundoJogador;
     this.jogadorEscolhido = jogadorEscolhido;
     this.tabuleiro = new Tabuleiro()
+    this.chapeleiro = new Chapeleiro()
 
+  }
+
+  exercutarJogada(linha, coluna){
+    const jogadaValdia = this.tabuleiro.fazerJogada(linha, coluna, this.jogadorEscolhido)
+    if(jogadaValdia){
+
+       if(this.chapeleiro.deveAparecer()){
+        this.chapeleiro.sortearEvento(jogo)
+       }
+
+
+
+      if(this.jogadorEscolhido == this.primeiroJogador){
+        this.jogadorEscolhido = this.segundoJogador
+      }else{
+        this.jogadorEscolhido = this.primeiroJogador
+      }
+    }
   }
 }
