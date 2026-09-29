@@ -11,12 +11,12 @@ import Chapeleiro from '../chapeleiro/chapeleiro.js';
 
   }
 
-  exercutarJogada(linha, coluna){
-    const jogadaValdia = this.tabuleiro.fazerJogada(linha, coluna, this.jogadorEscolhido)
+  executarJogada(linha, coluna){
+    const jogadaValdia = this.tabuleiro.fazerJogada(linha, coluna, this.jogadorEscolhido.simbolo)
     if(jogadaValdia){
-
+      
        if(this.chapeleiro.deveAparecer()){
-        this.chapeleiro.sortearEvento(jogo)
+        this.chapeleiro.sortearEvento(this)
        }
 
 
