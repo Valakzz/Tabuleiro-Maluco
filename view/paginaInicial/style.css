@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   background-image: url("/view/imgs/bodySite.jpg");
   background-size: cover;
@@ -12,3 +13,88 @@ header{
  margin:  80px;
  color: blueviolet;
 }
+=======
+body {
+  background-image: url("/Tabuleiro-Maluco/view/imgs/fundoSIte.jpeg");
+  background-size: cover;
+  margin: 0;
+  height: 100%;
+  flex-direction: column;
+  font-family: 'Matcha World', sans-serif;
+}
+
+
+@font-face {
+    font-family: 'Matcha World';
+    src: url('/Tabuleiro-Maluco/view/paginaInicial/font/Matcha\ World.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+header{
+  text-align: center;
+   font-size: 20px;
+   color: rgb(102, 20, 179);
+   margin: 0;
+    padding: 0;
+}
+
+header h1{
+  margin-bottom: 30px;
+
+}
+
+.tabuleiro{
+color: aliceblue;  display: grid;
+ grid-template-columns: repeat(3, 100px);
+ grid-template-rows: repeat(3, 100px);
+ gap: 10px;
+ justify-content: center;
+ align-content: center;
+ margin-top: 50px;
+}
+
+.casa{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(111, 18, 135);
+  border: 3px solid #1a022e;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  border-radius: 5px;
+
+}
+
+.casa:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+
+
+
+footer {
+ position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+    
+}
+
+footer span{
+  color: blueviolet;
+}
+
+
+footer span p{
+  color: rgb(237, 235, 239);
+  display: flex;
+  justify-content: center;
+  
+}
+>>>>>>> b1081367f36e99f301d2ed89edddaf06e95d908e
